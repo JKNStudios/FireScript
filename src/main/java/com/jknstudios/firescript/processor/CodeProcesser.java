@@ -10,6 +10,13 @@ import java.util.*;
 
 public class CodeProcesser {
     public static void executeScript(ArrayList<String> scriptContents) {
-        
+        for (String sx : scriptContents) {
+            if(sx.equals("nl():")) {
+                System.out.println("\n");
+            }
+            if(sx.contains("prnt(")) {
+                System.out.println(sx.replace("prnt(", "").replace("):", ""));
+            }
+         }
     }
 }
