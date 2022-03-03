@@ -25,8 +25,8 @@ public class FireScript {
                 if(scriptContents.get(0).equalsIgnoreCase("def firescript.script.FireApp:")) {
                     scriptContents.remove(0);
                     for (String sx : scriptContents) {
-                        if(sx.contains("vrb")) {
-                            String varx = 
+                        if(sx.equals("nl():")) {
+                            System.out.println("\n");
                         }
                         if(sx.contains("prnt(")) {
                             System.out.println(sx.replace("prnt(", "").replace("):", ""));
