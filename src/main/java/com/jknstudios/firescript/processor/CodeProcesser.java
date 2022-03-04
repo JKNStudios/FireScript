@@ -38,6 +38,26 @@ public class CodeProcesser {
                     ff.createNewFile();
                 }
             }
+            if(sx.equals("Integer::randomInt()")) {
+                int min = 0;
+                int max = 32767;
+                int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+                sx.replace("Integer::randomInt()", random_int);
+            }
+            if(sx.contains("String::randomString(\"")) {
+                int leftLimit = 48; 
+                int rightLimit = 122; 
+                int targetStringLength = Integer.valueOf(sx.replace("Steing::randomString(\"", "").replace("\"):", ""))
+               // int targetStringLength = 10;
+                Random random = new Random();
+   
+                String generatedString = random.ints(leftLimit, rightLimit + 1)
+                    .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+                    .limit(targetStringLength)
+                    .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                    .toString();
+                sx.replace("String::randomString()", generatedString);
+            }
         }
     }
 }
