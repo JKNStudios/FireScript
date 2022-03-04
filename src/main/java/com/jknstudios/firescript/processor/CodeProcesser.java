@@ -42,7 +42,7 @@ public class CodeProcesser {
                 int min = 0;
                 int max = 32767;
                 int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
-                sx.replace("Integer::randomInt()", random_int);
+                sx.replace("Integer::randomInt()", String.valueOf(random_int));
             }
             if(sx.contains("String::randomString(\"")) {
                 int leftLimit = 48; 
