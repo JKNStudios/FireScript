@@ -1,3 +1,3 @@
 def firescript.script.FireApp:
 
-prnt(Hello, World):	
+prnt("Hello, World"):	
