@@ -24,7 +24,7 @@ public class CodeProcesser {
             if(sx.contains("window(\"")) {
                 FrameUtil.createFrame(sx.replace("window(\"", "").replace("\"):", ""), FireScript.fileName);
             }
-            if(sx.contains("exit():")) {
+            if(sx.equals("exit():")) {
                 System.exit(0);
             }
             if(sx.contains("sysExec(\"")) {
