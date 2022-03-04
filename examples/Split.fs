@@ -1,6 +1,6 @@
 def firescript.script.FireApp:
 
 nl():
-prnt(Split):
+prnt("Split"):
 nl():
-prnt(Split):
+prnt("Split"):
