@@ -47,7 +47,7 @@ public class CodeProcesser {
             if(sx.contains("String::randomString(\"")) {
                 int leftLimit = 48; 
                 int rightLimit = 122; 
-                int targetStringLength = Integer.valueOf(sx.replace("Steing::randomString(\"", "").replace("\"):", ""))
+                int targetStringLength = Integer.valueOf(sx.replace("Steing::randomString(\"", "").replace("\"):", ""));
                // int targetStringLength = 10;
                 Random random = new Random();
    
