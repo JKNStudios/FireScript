@@ -1,3 +1,3 @@
 def firescript.script.FireApp:
 
-window(Hello, World):
+window("Hello, World"):
