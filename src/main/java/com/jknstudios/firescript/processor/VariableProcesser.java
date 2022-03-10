@@ -16,7 +16,7 @@ public class VariableProcesser {
   
   public static void process(ArrayList<String> scriptContents) throws Exception {
         for (String sx : scriptContents) {
-          if(sx.contains("Variable::new(\"") {
+          if(sx.contains("Variable::new(\"")) {
             if(sx.contains("::val(\"")) {
               String[] var_infoarray = sx.split("::");
               // Variable Format:
@@ -25,7 +25,7 @@ public class VariableProcesser {
               list.remove("Variable");
           
               list.set(1, list.get(1).replace("new(\"", "").replace("\")", ""));
-              list.set(2, list.get(2).replace("val(\")", "").replace("\"):", "");
+              list.set(2, list.get(2).replace("val(\")", "").replace("\"):", ""));
             } else {
               sx.replace("Variable::new(\"", "");
             }
